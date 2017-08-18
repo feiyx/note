@@ -1,19 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0034)http://www.cnblogs.com/feiyuanxing -->
 <html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>费元星的博客 - 博客园</title>
-<link type="text/css" rel="stylesheet" href="./费元星的博客 - 博客园_files/blog-common.css">
-<link id="MainCss" type="text/css" rel="stylesheet" href="./费元星的博客 - 博客园_files/bundle-coffee.css">
-<link type="text/css" rel="stylesheet" href="./费元星的博客 - 博客园_files/219212.css">
-<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./费元星的博客 - 博客园_files/bundle-coffee-mobile.css">
-<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/feiyuanxing/rss">
-<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/feiyuanxing/rsd.xml">
-<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/feiyuanxing/wlwmanifest.xml">
-<script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="./费元星的博客 - 博客园_files/jquery.js.下载" type="text/javascript"></script>  
-<script type="text/javascript">var currentBlogApp = 'feiyuanxing', cb_enable_mathjax=false;var isLogined=false;</script>
-<script src="./费元星的博客 - 博客园_files/blog-common.js.下载" type="text/javascript"></script>
 </head>
 <body>
 <a name="top"></a>
