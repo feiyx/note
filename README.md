@@ -5,16 +5,11 @@
 </head>
 <body>
 <a name="top"></a>
-<!--PageBeginHtml Block Begin-->
- <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+ <a style="color: red" align="center" href="http://www.feiyx.com/"><b>
 			<center><font size="4">未来星开发团队的官网</font></center>
 			</b>
 			</a>
 	
-	<br>
-<!--PageBeginHtml Block End-->
-
-<!--done-->
 <div id="home">
 <div id="header">
 	<div id="blogTitle">
@@ -27,8 +22,8 @@
 
 
 		
-	</div><!--end: blogTitle 博客的标题和副标题 -->
-</div><!--end: header 头部 -->
+	</div>
+</div>
 
 <div id="main">
 	<div id="mainContent">
@@ -49,19 +44,10 @@
 			<div class="blogStats">
 				
 				<div id="blog_stats">
-<!--done-->
-随笔- 89&nbsp;
-文章- 0&nbsp;
-评论- 3&nbsp;
 </div>
 				
-			</div><!--end: blogStats -->
-		</div><!--end: navigator 博客导航栏 -->
-		
-
-<!--done-->
-
-
+			</div>
+		</div>
 <div class="day">
 	<div class="dayTitle">
 		<a id="homepage1_HomePageDays_ctl00_ImageLink" title="Day link" href="http://www.cnblogs.com/feiyuanxing/">置顶随笔</a>				  
