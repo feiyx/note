@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>导入execl到数据库mysql - 费元星的博客 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=H3IOkgdPffpmgIkls4TofKh6PlSWVifjfgEhZr2VHqo1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee.css?v=NnZbvdgFaQNhu3t8P4Wsaz98sDQkgRt7Qxq2rzF0ZRU1"/>
+<link type="text/css" rel="stylesheet" href="/blog/customcss/219212.css?v=SlahhkE7ELQOV9kA%2fmhyfXP48o0%3d"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.css?v=EhLLUe5NHsx18JODVZscd5ef3A8WbJHKTlTvuKQjsl01"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/feiyuanxing/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/feiyuanxing/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/feiyuanxing/wlwmanifest.xml"/>
+<script src="//common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'feiyuanxing', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="/bundles/blog-common.js?v=Gjc-c4WOecxW2V4mwH9-EN2lPzwMWd4wyAzo535GvA01" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+<!--PageBeginHtml Block Begin-->
+<td> <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+			<center><font size="4">未来星开发团队的官网</font></center>
+			</b>
+			</a>
+	</td>
+	<br>
+<!--PageBeginHtml Block End-->
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/feiyuanxing/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/feiyuanxing/">费元星的博客</a></h1>
+<h2>未来星工作室--狒狒</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+	<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/feiyuanxing/">首页</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E8%B4%B9%E5%85%83%E6%98%9F%E7%9A%84%E5%8D%9A%E5%AE%A2">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/feiyuanxing/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/feiyuanxing/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a></li>
+</ul>
+
+
+			<div class="blogStats">
+				
+				<div id="blog_stats">
+<!--done-->
+随笔- 90&nbsp;
+文章- 0&nbsp;
+评论- 3&nbsp;
+</div>
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/feiyuanxing/p/5108918.html">导入execl到数据库mysql</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p><span style="color: #ff0000;">GwykhrenyuankuList</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&lt;body jwcid="$content$"&gt;<br />	&lt;span jwcid="@components/AppBorder" subtitle="需要使用务表"<br />		disableCaching="true"&gt; &lt;!--当前位置--&gt; &lt;!--页面主体--&gt;<br />		&lt;style type="text/css"&gt;<br />		.fileInputContainer{<br />			height:29px;<br />			background:url(/cjxb/common/images/btnDrry.png);<br />			position:relative;<br />			width: 85px;<br />			float: right;<br />		}</p>
+<p>			.fileInput{<br />				height:29px;<br />				width: 85px;<br />				overflow: hidden;<br />				position:absolute;<br />				right:0;<br />				top:0;<br />				opacity: 0;<br />				filter:alpha(opacity=0);<br />				cursor:pointer;<br />			}<br />		&lt;/style&gt;<br />		&lt;div jwcid="listData@Any" name="data" id="listData"&gt;<br />			&lt;form jwcid="queryForm@Form"&gt;<br />				&lt;!--功能区--&gt;<br />				&lt;h2 class="pagetitle"&gt;<br />					&lt;span&gt;测评管理&lt;/span&gt;<br />				&lt;/h2&gt;<br />				&lt;div class="news-list tol"&gt;<br />					&lt;h2 class="update"&gt;搜索条件<br />						&lt;a jwcid="@DirectLink" listener="ognl:listeners.backList" class="btnUpDate"&gt;&lt;img jwcid="@Any"<br />								src="/cjxb/common/images/btnFh.gif" /&gt;&lt;/a&gt;<br />					&lt;/h2&gt;<br />					&lt;!--搜索--&gt;<br />					&lt;div class="news-list tol"&gt;<br />                         &lt;div class="newForm"&gt;<br />                         	&lt;p class="clearfix"&gt;<br />                         		&lt;span class="spanTitle"&gt;姓名：&lt;/span&gt;<br />                            		&lt;input type="text" jwcid='qf_khrenyuanname@TextField' displayName="姓名" class="w150p mr10p" style="width:120px"<br />										value='ognl:queryFilter.fields["qf_khrenyuanname"].value' /&gt;<br />                         		&lt;span class="spanTitle"&gt;：&lt;/span&gt;<br />                         			&lt;input jwcid='qf_sijuid_code@PropertySelection' readOnly="readOnly" model="ognl:@com.app.util.GwykhUtils@getGzdwList()" style="width:120px"<br />                      					displayName="" class="w150p mr10p" value='ognl:queryFilter.fields["qf_sijuid_code"].value' /&gt;<br />                      			&lt;span class="spanTitle"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;：&lt;/span&gt;<br />                         			&lt;input jwcid='qf_offices@TextField' displayName="" class="w150p mr10p" value='ognl:queryFilter.fields["qf_offices"].value' style="width:114px"/&gt;<br />                            &lt;/p&gt;<br />                            &lt;p class="clearfix"&gt;<br />                         		&lt;span class="spanTitle"&gt;：&lt;/span&gt;<br />                         			&lt;input jwcid='qf_khrenyuanzhiwu@TextField' displayName="名称" <br />                         				class="w150p mr10p" style="width:120px" value='ognl:queryFilter.fields["qf_khrenyuanzhiwu"].value'/&gt;<br />                         		&lt;span class="spanTitle"&gt;：&lt;/span&gt;<br />                         			&lt;input jwcid='qf_levelNum@dev:PropertySelection' keyType='level' emptyMsg="请选择" displayName="" <br />                         				style="width: 120px;margin-right: 10px;" value='ognl:queryFilter.fields["qf_levelNum"].value'/&gt;<br />                         		&lt;span class="spanTitle"&gt;状态：&lt;/span&gt;<br />                         			&lt;input jwcid='qf_status@dev:PropertySelection' keyType='rystatus' emptyMsg="请选择" displayName="状态" <br />                         				style="width: 120px;margin-right: 10px;" value='ognl:queryFilter.fields["qf_status"].value'/&gt;<br />                         	&lt;/p&gt;<br />                         	&lt;p class="clearfix"&gt;	<br />                         		&lt;span class="spanTitle"&gt;岗位标志：&lt;/span&gt;<br />                         			&lt;input jwcid='qf_postFlag@dev:PropertySelection' keyType='post' emptyMsg="请选择" displayName="现岗位标志" <br />                         				style="width: 120px;margin-right: 10px;" value='ognl:queryFilter.fields["qf_postFlag"].value'/&gt;<br />                            &lt;/p&gt;<br />                               <br />                          &lt;/div&gt;&lt;/div&gt;<br />                          &lt;input jwcid="qf_khchengcibiaoid@TextField" value='ognl:queryFilter.fields["qf_khchengcibiaoid"].value' style="display: none;"/&gt;<br />                        &lt;h4 class="sign-h4"&gt;<br />                            &lt;a href="#" jwcid="@LinkSubmit"&gt;&lt;img jwcid="@Any"<br />								src="/cjxb/common/images/btnSearch01.gif" /&gt;&lt;/a&gt;<br />                            &lt;a href="#" parameters="ognl:new java.lang.String[]{'add',queryFilter.fields['qf_khchengcibiaoid'].value}"<br />										jwcid="@cofortune:ExternalLink" page="GwykhrenyuankuEdit"&gt;&lt;img jwcid="@Any"<br />								src="/cjxb/common/images/zj.gif" /&gt;&lt;/a&gt;<br />                            &lt;a href="javascript:void(0)"  onclick="$('#id_sys_del_link').click()" &gt;&lt;img jwcid="@Any"<br />								src="/cjxb/common/images/sc.gif" /&gt;&lt;/a&gt;<br />							&lt;!-- &lt;a href="#" onclick="javascript:$('#xlsFile').get(0).click();"&gt;导入人员&lt;/a&gt; --&gt;<br />                        &lt;/h4&gt;<br />					&lt;!--列表--&gt;<br />					&lt;h2 class="h2-table-title"&gt;<br />						&lt;div class="fileInputContainer"&gt;<br />							&lt;input type="file" jwcid="xlsFile@Upload" file="ognl:xlsFile" onchange="xlsUpload();" class="fileInput"/&gt;<br />						&lt;/div&gt;<br />						&lt;input jwcid="addPeople@Submit" value="" type="submit" listener="ognl:listeners.addPeople" style="display: none;"/&gt;<br />						务列表<br />					&lt;/h2&gt;<br />					&lt;table width="100%" border="0" cellspacing="0" cellpadding="0"<br />						class="list-table"&gt;<br />						&lt;colgroup&gt;<br />							&lt;col width="4%" /&gt;<br />							&lt;col width="12%"/&gt;<br />							&lt;col width="12%"/&gt;<br />							&lt;col width="12%"/&gt;<br />							&lt;col width="12%"/&gt;<br />							&lt;col width="10%"/&gt;<br />							&lt;col width="12%"/&gt;<br />							&lt;col width="14%"/&gt;<br />							&lt;col width="12%" /&gt;<br />						&lt;/colgroup&gt;<br />						&lt;tr&gt;<br />							&lt;th&gt;&lt;input type="checkbox" jwcid="allbox@cofortune:CheckAllBox" /&gt;&lt;/th&gt;<br />							&lt;th&gt;姓名&lt;/th&gt;<br />						    &lt;th&gt;&lt;/th&gt;<br />							&lt;th&gt;&lt;/th&gt;<br />							&lt;th&gt;现&lt;/th&gt;<br />							&lt;th&gt;&lt;/th&gt;<br />							&lt;th&gt;岗位标志&lt;/th&gt;<br />							&lt;th&gt;状态&lt;/th&gt;<br />							&lt;th&gt;操作&lt;/th&gt;<br />						&lt;/tr&gt;<br />						&lt;tfoot&gt;<br />							&lt;tr&gt;<br />								&lt;td colspan="9"&gt;&lt;span jwcid="nav"&gt;翻页组件&lt;/span&gt;&lt;/td&gt;<br />							&lt;/tr&gt;<br />						&lt;/tfoot&gt;<br />						&lt;tbody&gt;<br />							&lt;tr class="even" jwcid="foreach"&gt;<br />								&lt;td align="center" class="chk"&gt;&lt;input type="checkbox" jwcid="rowSelect" groupby="allbox" /&gt;&lt;/td&gt;<br />								&lt;td align="center"&gt;&lt;span jwcid="@Insert"<br />									value="ognl:item.khrenyuanname"&gt;名称&lt;/span&gt;&amp;nbsp;&lt;/td&gt;<br />								&lt;td align="center"&gt;&lt;span jwcid="@Insert"<br />									value="ognl:item.sijuid.gzdwValue"&gt;&lt;/span&gt;&amp;nbsp;&lt;/td&gt;<br />								&lt;td align="center"&gt;&lt;span jwcid="@Insert"<br />									value="ognl:@com.app.util.GwykhUtils@officesView(item.offices)"&gt;&lt;/span&gt;&amp;nbsp;&lt;/td&gt;<br />								&lt;td align="center"&gt;&lt;span jwcid="@Insert"<br />									value="ognl:item.khrenyuanzhiwu"&gt;&lt;/span&gt;&amp;nbsp;&lt;/td&gt;<br />								&lt;td align="center"&gt;&lt;span jwcid="@dev:Insert" dicType="level"<br />									value="ognl:item.levelNum"&gt;&lt;/span&gt;&amp;nbsp;&lt;/td&gt;<br />								&lt;td align="center"&gt;&lt;span jwcid="@dev:Insert" dicType="post"<br />									value="ognl:item.postFlag"&gt;现岗位标志&lt;/span&gt;&amp;nbsp;&lt;/td&gt;<br />								&lt;td align="center"&gt;&lt;span jwcid="@dev:Insert" dicType="rystatus"<br />									value="ognl:item.status"&gt;状态&lt;/span&gt;&amp;nbsp;&lt;/td&gt;<br />								&lt;td align="center"&gt;<br />									&lt;a href="#" parameters="ognl:new java.lang.String[]{'edit',item.id}"<br />										jwcid="@cofortune:ExternalLink" page="GwykhrenyuankuEdit"&gt;[修改]&lt;/a&gt;<br />									&lt;a jwcid="@DirectLink" listener="ognl:listeners.delete"<br />										parameters="ognl:item.id" onclick="return confirm('确定删除?');"&gt;[删除]&lt;/a&gt;<br />								&lt;/td&gt;<br />							&lt;/tr&gt;<br />						&lt;/tbody&gt;<br />					&lt;/table&gt;<br />				&lt;/div&gt;<br />				&lt;!--数据列表 end--&gt;<br />				&lt;a jwcid="id_sys_del_link@Submit" listener="ognl:listeners.delete" style="display: none" onclick="return confirm('确定要删除?');" /&gt;<br />			&lt;/form&gt;<br />		&lt;/div&gt;<br />	&lt;/span&gt;<br />	&lt;script type="text/javascript"&gt;<br />	&lt;!--<br />		function xlsUpload(){<br />			var file = $('#xlsFile').val();<br />			if(file != null &amp;&amp; file != "" &amp;&amp; file != undefined){<br />				var ext = file.substr(file.lastIndexOf('.'));<br />				if(ext == '.xls'){<br />					$("#addPeople").get(0).click();<br />				}else{<br />					alert("请上传Excel文件（2003格式）");<br />				}<br />			}<br />		}<br />	--&gt;<br />	&lt;/script&gt;<br />&lt;/body&gt;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>package com.app.pages.gwykh;</p>
+<p>import java.io.IOException;<br />import java.io.InputStream;<br />import java.util.ArrayList;<br />import java.util.HashMap;<br />import java.util.List;<br />import java.util.Map;</p>
+<p>import jxl.Sheet;<br />import jxl.Workbook;</p>
+<p>import org.apache.commons.lang.StringUtils;<br />import org.apache.tapestry.IRequestCycle;<br />import org.apache.tapestry.request.IUploadFile;</p>
+<p>import com.app.iface.gwykh.GwykhchengcibiaoIface;<br />import com.app.iface.gwykh.GwykhdanweiIface;<br />import com.app.iface.gwykh.GwykhrenyuankuIface;<br />import com.app.model.Gwykhdanwei;<br />import com.app.model.Gwykhrenyuanku;<br />import com.app.model.GwykhGzdw;<br />import com.app.service.gwykh.GwykhchengcibiaoService;<br />import com.app.service.gwykh.GwykhdanweiService;<br />import com.app.service.gwykh.GwykhrenyuankuService;<br />import com.app.util.GwykhUtils;<br />import com.cofortune.base.cache.CacheManager;<br />import com.cofortune.base.factory.ServiceFactory;<br />import com.cofortune.base.model.BaseDictionary;<br />import com.cofortune.base.model.BaseObject;<br />import com.cofortune.base.pages.CieccListPage;<br />import com.cofortune.framework.query.IPagingAndSorting;<br />import com.cofortune.framework.query.PagingAndSorting;<br />import com.cofortune.framework.query.QueryFilter;<br />/**<br /> * 人员库表列表页面<br /> * @每日一句:旁观者的姓名永远爬不到比赛的计分板上。  <br /> * @author 自动生成与2013-10-14 13:17:05 ^_^ GOOD LUCK!!<br /> */<br />public abstract class GwykhrenyuankuList extends CieccListPage {</p>
+<p>	/**<br />	 * 初始化分页排序<br />	 * 排序注意要加id<br />	 */<br />	public IPagingAndSorting initPagingAndSorting() {<br />		//默认以ID列进行排序，如需指定排序列请按照&ldquo;dicCode,id&rdquo;格式添加<br />		PagingAndSorting pagingAndSorting = new PagingAndSorting("sijuid.gzdwCode,postFlag,offices,levelNum,sort",false);<br />		pagingAndSorting.setMaxResults(20);<br />		return pagingAndSorting;<br />	}<br />	/**<br />	 * 初始化查询条件<br />	 */<br />	public QueryFilter initQueryFilter() {<br />		QueryFilter qf = new QueryFilter();		<br />		qf.addField("qf_khrenyuanname", "khrenyuanname", QueryFilter.OPERATION_LIKE, "");//人员名称<br />		qf.addField("qf_sijuid_code", "sijuid.gzdwCode", QueryFilter.OPERATION_EQ, "");//名称<br />		qf.addField("qf_offices", "offices", QueryFilter.OPERATION_EQ, "");//<br />		qf.addField("qf_khrenyuanzhiwu", "khrenyuanzhiwu", QueryFilter.OPERATION_LIKE, "");//人员<br />		qf.addField("qf_levelNum", "levelNum", QueryFilter.OPERATION_EQ, "");//职级<br />		qf.addField("qf_postFlag", "postFlag", QueryFilter.OPERATION_EQ, "");//现岗位标志<br />		qf.addField("qf_status", "status", QueryFilter.OPERATION_EQ, "");//状态<br />		qf.addField("qf_khchengcibiaoid", "khchengcibiaoid.id", QueryFilter.OPERATION_EQ, "");//层次表ID<br />		return qf;<br />	}<br />	/**<br />	 * 得到人员库表服务类<br />	 * @author 自动生成与2013-10-14 13:17:05 ^_^ GOOD LUCK!!<br />	 * @return <br />	 */<br />	public GwykhrenyuankuIface getGwykhrenyuankuService(){<br />		GwykhrenyuankuIface service = ServiceFactory.getBean(GwykhrenyuankuService.class, GwykhrenyuankuIface.class);<br />		return service;<br />	}<br />	/**<br />	 * 得到层次表服务类<br />	 * @author 自动生成与2013-10-14 13:17:28 ^_^ GOOD LUCK!!<br />	 * @return <br />	 */<br />	public GwykhchengcibiaoIface getGwykhchengcibiaoService(){<br />		GwykhchengcibiaoIface service = ServiceFactory.getBean(GwykhchengcibiaoService.class, GwykhchengcibiaoIface.class);<br />		return service;<br />	}<br />	/**<br />	 * 得到测评表服务类<br />	 * @author 自动生成与2013-10-14 13:17:15 ^_^ GOOD LUCK!!<br />	 * @return <br />	 */<br />	public GwykhdanweiIface getGwykhdanweiService(){<br />		GwykhdanweiIface service = ServiceFactory.getBean(GwykhdanweiService.class, GwykhdanweiIface.class);<br />		return service;<br />	}<br />	/**<br />	 * 加载人员库表数据<br />	 * @author 自动生成与2013-10-14 13:17:05 ^_^ GOOD LUCK!!<br />	 * @return <br />	 */<br />	public void loadData() {<br />		GwykhrenyuankuIface service=getGwykhrenyuankuService();<br />		List&lt;BaseObject&gt; find = service.findGwykhrenyuandaku(getQueryFilter(), getPagingAndSorting());<br />		setItems(find);<br />	}<br />	<br />	/**<br />	 * 删除人员库表<br />	 * @param id<br />	 * @author 自动生成与2013-10-14 13:17:05 ^_^ GOOD LUCK!!<br />	 * @return <br />	 */<br />	public void delete(String  id ){<br />		GwykhrenyuankuIface service=getGwykhrenyuankuService();<br />		if(StringUtils.isBlank(id)){<br />			service.removeGwykhrenyuanku(getSelectedList().toArray(new String[0]));<br />		}else{<br />			service.removeGwykhrenyuanku(id);<br />		}<br />		this.backToListWithParms("GwykhrenyuankuList,S"+System.currentTimeMillis());//带查询分页参数返回<br />	}<br />	<br />	public void backList(){<br />		this.backToListWithParms("GwykhchengcibiaoList,S"+System.currentTimeMillis());//带查询分页参数返回<br />	}<br />	<br />	public abstract IUploadFile getXlsFile();<br />	public abstract void setXlsFile(IUploadFile xlsFile);<br />	<br />	public void addPeople(){<br />		/**接装**/<br />		Map dwMap = new HashMap();<br />		QueryFilter qf = new QueryFilter();<br />		qf.addField("qf_status", "status", QueryFilter.OPERATION_LIKE, "1");<br />		qf.addField("qf_khchengcibiaoid", "khchengcibiaoid", QueryFilter.OPERATION_LIKE, getQueryFilter().getField("qf_khchengcibiaoid").getValue().toString());<br />		List danwei = getGwykhdanweiService().findGwykhdanwei(qf, null);<br />		if(danwei != null &amp;&amp; danwei.size() &gt; 0){<br />			for(Object obj : danwei){<br />				dwMap.put(((Gwykhdanwei)obj).getGzdwid().getGzdwCode(), obj);<br />			}<br />		}<br />		IUploadFile xlsFile = getXlsFile();<br />		InputStream is = xlsFile.getStream();<br />		Workbook rwb = null;<br />		List&lt;Gwykhrenyuanku&gt; list = new ArrayList&lt;Gwykhrenyuanku&gt;();<br />		try {<br />			rwb = Workbook.getWorkbook(is);<br />			Sheet rs = rwb.getSheet(0);// 获取第一张Sheet表<br />			int rsRows = rs.getRows();// 获取Sheet表中所包含的总行数<br />			for (int i = 1; i &lt; rsRows; i++) {//**从第二行开始读取数据  这里默认从第2行开始读取<br />				Gwykhrenyuanku ry = new Gwykhrenyuanku();<br />				ry.setKhchengcibiaoid(getGwykhchengcibiaoService().editGwykhchengcibiao(getQueryFilter().getField("qf_khchengcibiaoid").getValue().toString()));<br />				String name = rs.getCell(0, i).getContents();<br />				if(StringUtils.isNotBlank(name)){<br />					ry.setKhrenyuanname(name);<br />					String sijuName = rs.getCell(1, i).getContents();//获得名称<br />					GwykhGzdw gzdw = GwykhUtils.getGzdwByGzdwValue(sijuName);//获得信息<br />					ry.setSijuid(gzdw);<br />					ry.setSijuname(gzdw.getGzdwValue());<br />					<br />					ry.setKhdanweiid((Gwykhdanwei)dwMap.get(gzdw.getGzdwCode()));//<br />					<br />					String offices = rs.getCell(2, i).getContents();//名<br />//					BaseDictionary dic = CacheManager.getInstance().getBaseDicByName("offices", offices);<br />//					if(dic != null){<br />//						offices = dic.getDicCode();<br />//					}<br />					ry.setOffices(offices);<br />					<br />					String zhiwu = rs.getCell(3, i).getContents();//现<br />//					BaseDictionary dic = CacheManager.getInstance().getBaseDicByName("zw", zhiwu);<br />//					if(dic != null){<br />//						zhiwu = dic.getDicCode();<br />//					}<br />					ry.setKhrenyuanzhiwu(zhiwu);<br />					<br />					String level = rs.getCell(4, i).getContents();//序号<br />					ry.setLevelNum(level);<br />					<br />					String postFlag = rs.getCell(5, i).getContents();//现岗位标志<br />					<br />					/** 通过现岗位标志确定状态 */<br />					//1只2测评3无测评<br />//					if(GwykhUtils.POST_NAME_1.contains(postFlag)){<br />//						ry.setStatus(GwykhUtils.STATUS_FLAG_1);<br />//					}else if(GwykhUtils.POST_NAME_2.contains(postFlag)){<br />//						ry.setStatus(GwykhUtils.STATUS_FLAG_2);<br />//					}else <br />					if(GwykhUtils.POST_NAME_3.contains(postFlag)){<br />						ry.setStatus(GwykhUtils.STATUS_FLAG_3);<br />					}else{<br />						ry.setStatus("");<br />					}<br />					<br />					BaseDictionary dic = CacheManager.getInstance().getBaseDicByName("post", postFlag);<br />					if(dic != null){<br />						postFlag = dic.getDicCode();<br />					}<br />					ry.setPostFlag(postFlag);<br />					<br />					String sort = rs.getCell(6, i).getContents();//排序<br />					if(sort != null &amp;&amp; sort != ""){<br />						ry.setSort(Integer.parseInt(sort));<br />					}<br />					<br />					ry.setIstongguo("0");<br />					list.add(ry);<br />				}<br />			}<br />			this.getGwykhrenyuankuService().saveOrUpdateGwykhrenyuankuByList(list, getQueryFilter().getField("qf_khchengcibiaoid").getValue().toString());<br />		} catch (Exception e) {<br />			// TODO Auto-generated catch block<br />			e.printStackTrace();<br />		} finally {<br />			if(rwb != null){<br />				rwb.close();<br />			}<br />			if(is != null){<br />				try {<br />					is.close();<br />				} catch (IOException e) {<br />					// TODO Auto-generated catch block<br />					e.printStackTrace();<br />				}<br />			}<br />		}<br />		this.backToListWithParms("GwykhrenyuankuList,S"+System.currentTimeMillis());//带查询分页参数返回<br />	}<br />	<br />	//接收参数，需要传递参数在此修改<br />	@Override<br />	public void activateExternalPage(Object[] arg0, IRequestCycle arg1) {<br />		if(arg0!=null){//添加额外参数使用，添加好的参数一定要传入到queryFilter中，不然分页时候出现错误，如下部分<br />			if("list".equals(arg0[0])){<br />				getQueryFilter().getField("qf_khchengcibiaoid").setValue(arg0[1]);<br />			}<br />		}<br />		super.activateExternalPage(arg0, arg1);<br />	}<br />	<br />	//搜索区域下拉框<br />													<br />	<br />	<br />	<br />	<br />	<br />	<br />}</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2016-01-07 10:24</span> <a href='http://www.cnblogs.com/feiyuanxing/'>费元星的博客</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=5108918" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(5108918);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=219212,cb_entryId=5108918,cb_blogApp=currentBlogApp,cb_blogUserGuid='806a1ad5-d1cf-e411-b908-9dcfd8948a71',cb_entryCreatedDate='2016/1/7 10:24:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<div id='cnblogs_c1' class='c_ad_block'></div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'></div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2017 费元星的博客
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<!--PageEndHtml Block Begin-->
+<td> <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+			<center><font size="15">未来星开发团队的官网</font></center>
+			</b>
+			</a>
+	</td>
+	<br>
+<!--PageEndHtml Block End-->
+</body>
+</html>

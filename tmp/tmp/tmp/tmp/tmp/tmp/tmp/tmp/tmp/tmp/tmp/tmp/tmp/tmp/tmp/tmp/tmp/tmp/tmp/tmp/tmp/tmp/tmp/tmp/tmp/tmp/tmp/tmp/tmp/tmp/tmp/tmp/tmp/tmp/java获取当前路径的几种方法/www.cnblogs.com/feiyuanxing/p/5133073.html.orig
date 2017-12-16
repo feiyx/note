@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>java获取当前路径的几种方法 - 费元星的博客 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=H3IOkgdPffpmgIkls4TofKh6PlSWVifjfgEhZr2VHqo1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee.css?v=NnZbvdgFaQNhu3t8P4Wsaz98sDQkgRt7Qxq2rzF0ZRU1"/>
+<link type="text/css" rel="stylesheet" href="/blog/customcss/219212.css?v=SlahhkE7ELQOV9kA%2fmhyfXP48o0%3d"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.css?v=EhLLUe5NHsx18JODVZscd5ef3A8WbJHKTlTvuKQjsl01"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/feiyuanxing/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/feiyuanxing/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/feiyuanxing/wlwmanifest.xml"/>
+<script src="//common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'feiyuanxing', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="/bundles/blog-common.js?v=Gjc-c4WOecxW2V4mwH9-EN2lPzwMWd4wyAzo535GvA01" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+<!--PageBeginHtml Block Begin-->
+<td> <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+			<center><font size="4">未来星开发团队的官网</font></center>
+			</b>
+			</a>
+	</td>
+	<br>
+<!--PageBeginHtml Block End-->
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/feiyuanxing/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/feiyuanxing/">费元星的博客</a></h1>
+<h2>未来星工作室--狒狒</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+	<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/feiyuanxing/">首页</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E8%B4%B9%E5%85%83%E6%98%9F%E7%9A%84%E5%8D%9A%E5%AE%A2">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/feiyuanxing/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/feiyuanxing/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a></li>
+</ul>
+
+
+			<div class="blogStats">
+				
+				<div id="blog_stats">
+<!--done-->
+随笔- 90&nbsp;
+文章- 0&nbsp;
+评论- 3&nbsp;
+</div>
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/feiyuanxing/p/5133073.html">java获取当前路径的几种方法</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><div class="blog_content">0.获取 部署class 的路径String path = Thread.currentThread().getContextClassLoader().getResource("")+"";</div>
+<div class="blog_content">1、利用System.getProperty()函数获取当前路径：&nbsp;<br />System.out.println(System.getProperty("user.dir"));//user.dir指定了当前的路径&nbsp;<br /><br />2、使用File提供的函数获取当前路径：&nbsp;<br />File directory = new File("");//设定为当前文件夹&nbsp;<br />try{&nbsp;<br />&nbsp;&nbsp;&nbsp; System.out.println(directory.getCanonicalPath());//获取标准的路径&nbsp;<br />&nbsp;&nbsp;&nbsp; System.out.println(directory.getAbsolutePath());//获取绝对路径&nbsp;<br />}catch(Exceptin e){}&nbsp;<br /><br />File.getCanonicalPath()和File.getAbsolutePath()大约只是对于new File(".")和new File("..")两种路径有所区别。&nbsp;<br /><br /># 对于getCanonicalPath()函数，&ldquo;."就表示当前的文件夹，而&rdquo;..&ldquo;则表示当前文件夹的上一级文件夹&nbsp;<br /># 对于getAbsolutePath()函数，则不管&rdquo;.&rdquo;、&ldquo;..&rdquo;，返回当前的路径加上你在new File()时设定的路径&nbsp;<br /># 至于getPath()函数，得到的只是你在new File()时设定的路径&nbsp;<br /><br />比如当前的路径为 C:/test ：&nbsp;<br />File directory = new File("abc");&nbsp;<br />directory.getCanonicalPath(); //得到的是C:/test/abc&nbsp;<br />directory.getAbsolutePath();&nbsp;&nbsp;&nbsp; //得到的是C:/test/abc&nbsp;<br />direcotry.getPath();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //得到的是abc&nbsp;<br /><br />File directory = new File(".");&nbsp;<br />directory.getCanonicalPath(); //得到的是C:/test&nbsp;<br />directory.getAbsolutePath();&nbsp;&nbsp;&nbsp; //得到的是C:/test/.&nbsp;<br />direcotry.getPath();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //得到的是.&nbsp;<br /><br />File directory = new File("..");&nbsp;<br />directory.getCanonicalPath(); //得到的是C:/&nbsp;<br />directory.getAbsolutePath();&nbsp;&nbsp;&nbsp; //得到的是C:/test/..&nbsp;<br />direcotry.getPath();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //得到的是..&nbsp;<br /><br /><br />另外：System.getProperty()中的字符串参数如下：&nbsp;<br />System.getProperty()参数大全&nbsp;<br /># java.version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java Runtime Environment version&nbsp;&nbsp;<br /># java.vendor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java Runtime Environment vendor&nbsp;&nbsp;<br /># java.vendor.url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java vendor URL&nbsp;&nbsp;<br /># java.home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java installation directory&nbsp;&nbsp;<br /># java.vm.specification.version&nbsp;&nbsp; Java Virtual Machine specification version&nbsp;&nbsp;<br /># java.vm.specification.vendor&nbsp;&nbsp;&nbsp; Java Virtual Machine specification vendor&nbsp;&nbsp;<br /># java.vm.specification.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java Virtual Machine specification name&nbsp;&nbsp;<br /># java.vm.version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java Virtual Machine implementation version&nbsp;&nbsp;<br /># java.vm.vendor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java Virtual Machine implementation vendor&nbsp;&nbsp;<br /># java.vm.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java Virtual Machine implementation name&nbsp;&nbsp;<br /># java.specification.version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java Runtime Environment specification version&nbsp;&nbsp;<br /># java.specification.vendor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java Runtime Environment specification vendor&nbsp;&nbsp;<br /># java.specification.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java Runtime Environment specification name&nbsp;&nbsp;<br /># java.class.version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java class format version number&nbsp;&nbsp;<br /># java.class.path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java class path&nbsp;&nbsp;<br /># java.library.path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List of paths to search when loading libraries&nbsp;&nbsp;<br /># java.io.tmpdir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Default temp file path&nbsp;&nbsp;<br /># java.compiler&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name of JIT compiler to use&nbsp;&nbsp;<br /># java.ext.dirs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Path of extension directory or directories&nbsp;&nbsp;<br /># os.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Operating system name&nbsp;&nbsp;<br /># os.arch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Operating system architecture&nbsp;&nbsp;<br /># os.version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Operating system version&nbsp;&nbsp;<br /># file.separator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; File separator ("/" on UNIX)&nbsp;&nbsp;<br /># path.separator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Path separator (":" on UNIX)&nbsp;&nbsp;<br /># line.separator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Line separator ("/n" on UNIX)&nbsp;&nbsp;<br /># user.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User&rsquo;s account name&nbsp;&nbsp;<br /># user.home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User&rsquo;s home directory&nbsp;&nbsp;<br /># user.dir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User&rsquo;s current working directory</div>
+<div class="blog_content">
+<h3><a name="t1"></a><a href="http://blog.csdn.net/blog/166104">JAVA中获取路径</a></h3>
+
+
+关键字: java中获取路径
+<div class="blog_content">JAVA中获取路径:&nbsp;<br /><br /><br />1.jsp中取得路径：&nbsp;<br />&nbsp;&nbsp;<br />以工程名为TEST为例：&nbsp;<br /><br />(1)得到包含工程名的当前页面全路径：request.getRequestURI()&nbsp;<br />结果：/TEST/test.jsp&nbsp;<br />(2)得到工程名：request.getContextPath()&nbsp;<br />结果：/TEST&nbsp;<br />(3)得到当前页面所在目录下全名称：request.getServletPath()&nbsp;<br />结果：如果页面在jsp目录下 /TEST/jsp/test.jsp&nbsp;<br />(4)得到页面所在服务器的全路径：application.getRealPath("页面.jsp")&nbsp;<br />结果：D:/resin/webapps/TEST/test.jsp&nbsp;<br />(5)得到页面所在服务器的绝对路径：absPath=new java.io.File(application.getRealPath(request.getRequestURI())).getParent();&nbsp;<br />结果：D:/resin/webapps/TEST&nbsp;<br /><br />2.在类中取得路径：&nbsp;<br /><br />(1)类的绝对路径：Class.class.getClass().getResource("/").getPath()&nbsp;<br />结果：/D:/TEST/WebRoot/WEB-INF/classes/pack/&nbsp;<br />(2)得到工程的路径：System.getProperty("user.dir")&nbsp;<br />结果：D:/TEST&nbsp;<br /><br />3.在Servlet中取得路径：&nbsp;<br /><br />(1)得到工程目录：request.getSession().getServletContext().getRealPath("") 参数可具体到包名。&nbsp;<br />结果：E:/Tomcat/webapps/TEST&nbsp;<br />(2)得到IE地址栏地址：request.getRequestURL()&nbsp;<br />结果：http://localhost:8080/TEST/test&nbsp;<br />(3)得到相对地址：request.getRequestURI()&nbsp;<br />结果：/TEST/test&nbsp;</div>
+
+
+</div></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2016-01-15 13:34</span> <a href='http://www.cnblogs.com/feiyuanxing/'>费元星的博客</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=5133073" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(5133073);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=219212,cb_entryId=5133073,cb_blogApp=currentBlogApp,cb_blogUserGuid='806a1ad5-d1cf-e411-b908-9dcfd8948a71',cb_entryCreatedDate='2016/1/15 13:34:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<div id='cnblogs_c1' class='c_ad_block'></div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'></div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2017 费元星的博客
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<!--PageEndHtml Block Begin-->
+<td> <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+			<center><font size="15">未来星开发团队的官网</font></center>
+			</b>
+			</a>
+	</td>
+	<br>
+<!--PageEndHtml Block End-->
+</body>
+</html>

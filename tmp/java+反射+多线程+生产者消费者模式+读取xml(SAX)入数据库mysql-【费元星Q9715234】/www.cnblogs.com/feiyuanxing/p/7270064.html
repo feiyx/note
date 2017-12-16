@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>java+反射+多线程+生产者消费者模式+读取xml(SAX)入数据库mysql-【费元星Q9715234】 - 费元星的博客 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="../../bundles/blog-common.css%3Fv=H3IOkgdPffpmgIkls4TofKh6PlSWVifjfgEhZr2VHqo1.css"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="../../skins/coffee/bundle-coffee.css%3Fv=NnZbvdgFaQNhu3t8P4Wsaz98sDQkgRt7Qxq2rzF0ZRU1.css"/>
+<link type="text/css" rel="stylesheet" href="../../blog/customcss/219212.css%3Fv=SlahhkE7ELQOV9kA%252FmhyfXP48o0=.css"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="../../skins/coffee/bundle-coffee-mobile.css%3Fv=EhLLUe5NHsx18JODVZscd5ef3A8WbJHKTlTvuKQjsl01.css"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/feiyuanxing/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/feiyuanxing/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/feiyuanxing/wlwmanifest.xml"/>
+<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'feiyuanxing', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="../../bundles/blog-common.js%3Fv=Gjc-c4WOecxW2V4mwH9-EN2lPzwMWd4wyAzo535GvA01" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+<!--PageBeginHtml Block Begin-->
+<td> <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+			<center><font size="4">未来星开发团队的官网</font></center>
+			</b>
+			</a>
+	</td>
+	<br>
+<!--PageBeginHtml Block End-->
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/feiyuanxing/"><img id="blogLogo" src="../../Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/feiyuanxing/">费元星的博客</a></h1>
+<h2>未来星工作室--狒狒</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+	<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/feiyuanxing/">首页</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E8%B4%B9%E5%85%83%E6%98%9F%E7%9A%84%E5%8D%9A%E5%AE%A2">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/feiyuanxing/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/feiyuanxing/rss"><img src="../../images/xml.gif" alt="订阅" /></a></li>
+</ul>
+
+
+			<div class="blogStats">
+				
+				<div id="blog_stats">
+<!--done-->
+随笔- 90&nbsp;
+文章- 0&nbsp;
+评论- 3&nbsp;
+</div>
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="7270064.html">java+反射+多线程+生产者消费者模式+读取xml(SAX)入数据库mysql-【费元星Q9715234】</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p>java+反射+多线程+生产者消费者模式+读取xml(SAX)入数据库mysql-【费元星Q9715234】</p>
+<p>说明如下，不懂的问题直接我【费元星Q9715234】</p>
+<p>1.反射的意义在于不将xml tag写死在sax 的代码中，直接配置到一个bean就可以了。</p>
+<p>2.多线程分工明确，线程各做各的任务，生产者只用了一个线程，使用多线程没有意义，瓶颈在IO</p>
+<p>3.SAX读取超大文件的性能较好，dom等均不佳。</p>
+<p>4.总的瓶颈在DB的入库，可以使用insert ，好一点使用spring 预编译，保证全数据的入库。我采用的是mysql 的load，性能提升8倍左右，缺点是没有对数据中的阿拉伯文等语种做处理，</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #008000;">/**</span>
+<span style="color: #008080;"> 2</span> <span style="color: #008000;"> * &lt;a&gt; 读xml的管 理类 &lt;/a&gt;
+</span><span style="color: #008080;"> 3</span> <span style="color: #008000;"> *
+</span><span style="color: #008080;"> 4</span> <span style="color: #008000;"> * </span><span style="color: #808080;">@author</span><span style="color: #008000;">: feiyuanxing@baidu.com
+</span><span style="color: #008080;"> 5</span> <span style="color: #008000;"> * @time 2016/12/27
+</span><span style="color: #008080;"> 6</span>  <span style="color: #008000;">*/</span>
+<span style="color: #008080;"> 7</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> ReadXmlManger {
+</span><span style="color: #008080;"> 8</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">final</span> Logger logger = LoggerFactory.getLogger(ReadXmlManger.<span style="color: #0000ff;">class</span><span style="color: #000000;">);
+</span><span style="color: #008080;"> 9</span> 
+<span style="color: #008080;">10</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span><span style="color: #000000;"> String insertTempFile;
+</span><span style="color: #008080;">11</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span><span style="color: #000000;"> String updateTempFile;
+</span><span style="color: #008080;">12</span> 
+<span style="color: #008080;">13</span>     <span style="color: #008000;">/**</span>
+<span style="color: #008080;">14</span> <span style="color: #008000;">     * 各种字符型的入库 还没有做
+</span><span style="color: #008080;">15</span> <span style="color: #008000;">     *
+</span><span style="color: #008080;">16</span> <span style="color: #008000;">     * </span><span style="color: #808080;">@param</span><span style="color: #008000;"> args
+</span><span style="color: #008080;">17</span>      <span style="color: #008000;">*/</span>
+<span style="color: #008080;">18</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> main(String[] args) {
+</span><span style="color: #008080;">19</span>         Long starTime =<span style="color: #000000;"> System.currentTimeMillis();
+</span><span style="color: #008080;">20</span>         String needAnalysisFileDir = "D:\\creditcode\\xml\\"<span style="color: #000000;">;
+</span><span style="color: #008080;">21</span>         insertTempFile = "D:\\creditcode\\tmp\\tmpInsert.sql"<span style="color: #000000;">;
+</span><span style="color: #008080;">22</span>         updateTempFile = "D:\\\\creditcode\\\\tmp\\\\tmpDelete.sql"<span style="color: #000000;">;
+</span><span style="color: #008080;">23</span> 
+<span style="color: #008080;">24</span>         <span style="color: #0000ff;">if</span> (args.length == 3<span style="color: #000000;">) {
+</span><span style="color: #008080;">25</span>             needAnalysisFileDir = args[0<span style="color: #000000;">];
+</span><span style="color: #008080;">26</span>             insertTempFile = args[1<span style="color: #000000;">];
+</span><span style="color: #008080;">27</span>             updateTempFile = args[2<span style="color: #000000;">];
+</span><span style="color: #008080;">28</span>             System.out.println("argument is right:" + args.length +<span style="color: #000000;"> Arrays.toString(args));
+</span><span style="color: #008080;">29</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">30</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> else {
+</span><span style="color: #008080;">31</span>         <span style="color: #008000;">//</span><span style="color: #008000;">            System.out.println("argument is not right:" + args.length + Arrays.toString(args) + " ，over...");
+</span><span style="color: #008080;">32</span>         <span style="color: #008000;">//</span><span style="color: #008000;">            System.exit(1);
+</span><span style="color: #008080;">33</span>         <span style="color: #008000;">//</span><span style="color: #008000;">            return;
+</span><span style="color: #008080;">34</span>         <span style="color: #008000;">//</span>
+<span style="color: #008080;">35</span>         <span style="color: #008000;">//</span><span style="color: #008000;">        }
+</span><span style="color: #008080;">36</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 对各种连接做初始化</span>
+<span style="color: #008080;">37</span> <span style="color: #000000;">        ImportDataUtil.getConnet();
+</span><span style="color: #008080;">38</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 加载文件路径到队列中</span>
+<span style="color: #008080;">39</span> <span style="color: #000000;">        ImportDataUtil.getXmlDirToQueue(needAnalysisFileDir);
+</span><span style="color: #008080;">40</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 执行将数据中的md5 列加载得到内存中</span>
+<span style="color: #008080;">41</span> <span style="color: #000000;">        ImportDataUtil.getSourecXmlList();
+</span><span style="color: #008080;">42</span> 
+<span style="color: #008080;">43</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 创建初始化流</span>
+<span style="color: #008080;">44</span> <span style="color: #000000;">        ImportDataUtil.createWriter(insertTempFile, updateTempFile);
+</span><span style="color: #008080;">45</span>         logger.info("begin compare..."<span style="color: #000000;">);
+</span><span style="color: #008080;">46</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 读xml到队列中</span>
+<span style="color: #008080;">47</span>         XmlData.pool.execute(<span style="color: #0000ff;">new</span> ReadXmlThread(CreditCode.<span style="color: #0000ff;">class</span><span style="color: #000000;">));
+</span><span style="color: #008080;">48</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 从队列中取值比较完后写到txt中</span>
+<span style="color: #008080;">49</span>         XmlData.pool.execute(<span style="color: #0000ff;">new</span> CompareThread(CreditCode.<span style="color: #0000ff;">class</span><span style="color: #000000;">));
+</span><span style="color: #008080;">50</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 等待所有子线程执行完</span>
+<span style="color: #008080;">51</span>         <span style="color: #0000ff;">while</span> (<span style="color: #0000ff;">true</span><span style="color: #000000;">) {
+</span><span style="color: #008080;">52</span>             <span style="color: #0000ff;">if</span><span style="color: #000000;"> (XmlData.pool.isShutdown()) {
+</span><span style="color: #008080;">53</span>                 <span style="color: #008000;">//</span><span style="color: #008000;"> 将txt中的数据load到数据库中</span>
+<span style="color: #008080;">54</span> <span style="color: #000000;">                loadData();
+</span><span style="color: #008080;">55</span>                 Long endTime =<span style="color: #000000;"> System.currentTimeMillis();
+</span><span style="color: #008080;">56</span>                 logger.info("compare over ,all read " + XmlData.atomicIntegerSC.get() + " ;"<span style="color: #000000;">);
+</span><span style="color: #008080;">57</span>                 logger.info("Import the data complete, takes " + (endTime - starTime) / 1000 + " seconds;"<span style="color: #000000;">);
+</span><span style="color: #008080;">58</span>                 <span style="color: #0000ff;">return</span><span style="color: #000000;">;
+</span><span style="color: #008080;">59</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;">60</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">61</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">62</span> 
+<span style="color: #008080;">63</span>     <span style="color: #008000;">//</span><span style="color: #008000;"> 都执行完执行</span>
+<span style="color: #008080;">64</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> loadData() {
+</span><span style="color: #008080;">65</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 将最后的新增加数据load到source文件中</span>
+<span style="color: #008080;">66</span> <span style="color: #000000;">        ImportDataUtil.dumpInsertBuilder2File();
+</span><span style="color: #008080;">67</span> 
+<span style="color: #008080;">68</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 将txt文件load到数据中  false未启用</span>
+<span style="color: #008080;">69</span>         CreditCode creditCode = <span style="color: #0000ff;">null</span><span style="color: #000000;">;
+</span><span style="color: #008080;">70</span>         logger.info("Start the load data for the last time...."<span style="color: #000000;">);
+</span><span style="color: #008080;">71</span>         logger.info("The mission were increased： " + XmlData.currentAddNum.get() + " tiao data"<span style="color: #000000;">);
+</span><span style="color: #008080;">72</span>         ImportDataUtil.loadFile(insertTempFile, CreditCode.<span style="color: #0000ff;">class</span><span style="color: #000000;">);
+</span><span style="color: #008080;">73</span> 
+<span style="color: #008080;">74</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 清空md5表</span>
+<span style="color: #008080;">75</span> <span style="color: #000000;">        ImportDataUtil.clearTmpTable();
+</span><span style="color: #008080;">76</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 将集合中剩余的md5写到文件中</span>
+<span style="color: #008080;">77</span>         logger.info("Began to set in the rest of the md5 written to a file "<span style="color: #000000;">);
+</span><span style="color: #008080;">78</span> <span style="color: #000000;">        ImportDataUtil.dumpUpdateBuilder2File();
+</span><span style="color: #008080;">79</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> load进数据 and 级联删除数据</span>
+<span style="color: #008080;">80</span>         logger.info("Delete data load and start cascading delete data..."<span style="color: #000000;">);
+</span><span style="color: #008080;">81</span> <span style="color: #000000;">        ImportDataUtil.sourceFile(updateTempFile);
+</span><span style="color: #008080;">82</span> <span style="color: #000000;">        XmlData.context.close();
+</span><span style="color: #008080;">83</span> 
+<span style="color: #008080;">84</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">85</span> 
+<span style="color: #008080;">86</span> }</pre>
+</div>
+<p>&nbsp;</p>
+<p>类列表</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #000000;">BeanListHandler
+</span><span style="color: #008080;">2</span> <span style="color: #000000;">CompareThread
+</span><span style="color: #008080;">3</span> <span style="color: #000000;">ImportDataUtil
+</span><span style="color: #008080;">4</span> <span style="color: #000000;">ReadXmlThread
+</span><span style="color: #008080;">5</span> <span style="color: #000000;">WriteFileUtil
+</span><span style="color: #008080;">6</span> <span style="color: #000000;">XmlColumn
+</span><span style="color: #008080;">7</span> <span style="color: #000000;">XmlData
+</span><span style="color: #008080;">8</span> XmlSAXParse</pre>
+</div>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2017-08-01 19:56</span> <a href='http://www.cnblogs.com/feiyuanxing/'>费元星的博客</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=7270064" rel="nofollow">编辑</a> <a href="7270064.html#" onclick="AddToWz(7270064);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=219212,cb_entryId=7270064,cb_blogApp=currentBlogApp,cb_blogUserGuid='806a1ad5-d1cf-e411-b908-9dcfd8948a71',cb_entryCreatedDate='2017/8/1 19:56:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='7270064.html#' onclick='return RefreshPage();'>刷新页面</a><a href='7270064.html#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<div id='cnblogs_c1' class='c_ad_block'></div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'></div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2017 费元星的博客
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<!--PageEndHtml Block Begin-->
+<td> <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+			<center><font size="15">未来星开发团队的官网</font></center>
+			</b>
+			</a>
+	</td>
+	<br>
+<!--PageEndHtml Block End-->
+</body>
+</html>

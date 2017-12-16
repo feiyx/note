@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>【centos6.5 hadoop2.7 _64位一键安装脚本】有问题加我Q直接问 - 费元星的博客 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="../../bundles/blog-common.css%3Fv=H3IOkgdPffpmgIkls4TofKh6PlSWVifjfgEhZr2VHqo1.css"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="../../skins/coffee/bundle-coffee.css%3Fv=NnZbvdgFaQNhu3t8P4Wsaz98sDQkgRt7Qxq2rzF0ZRU1.css"/>
+<link type="text/css" rel="stylesheet" href="../../blog/customcss/219212.css%3Fv=SlahhkE7ELQOV9kA%252FmhyfXP48o0=.css"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="../../skins/coffee/bundle-coffee-mobile.css%3Fv=EhLLUe5NHsx18JODVZscd5ef3A8WbJHKTlTvuKQjsl01.css"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/feiyuanxing/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/feiyuanxing/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/feiyuanxing/wlwmanifest.xml"/>
+<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'feiyuanxing', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="../../bundles/blog-common.js%3Fv=Gjc-c4WOecxW2V4mwH9-EN2lPzwMWd4wyAzo535GvA01" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+<!--PageBeginHtml Block Begin-->
+<td> <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+			<center><font size="4">未来星开发团队的官网</font></center>
+			</b>
+			</a>
+	</td>
+	<br>
+<!--PageBeginHtml Block End-->
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/feiyuanxing/"><img id="blogLogo" src="../../Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/feiyuanxing/">费元星的博客</a></h1>
+<h2>未来星工作室--狒狒</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+	<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/feiyuanxing/">首页</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E8%B4%B9%E5%85%83%E6%98%9F%E7%9A%84%E5%8D%9A%E5%AE%A2">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/feiyuanxing/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/feiyuanxing/rss"><img src="../../images/xml.gif" alt="订阅" /></a></li>
+</ul>
+
+
+			<div class="blogStats">
+				
+				<div id="blog_stats">
+<!--done-->
+随笔- 90&nbsp;
+文章- 0&nbsp;
+评论- 3&nbsp;
+</div>
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="8007091.html">【centos6.5 hadoop2.7 _64位一键安装脚本】有问题加我Q直接问</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p>#!/bin/bash<br />#@author：feiyuanxing 【既然笨到家，就要努力到家】<br />#@date：2017-01-05<br />#@E-Mail：feiyuanxing@gmail.com<br />#@TARGET:一键安装hadoop 2.7.1 centos 64位 <br />#@CopyRight:本脚本遵守 未来星开源协议（http://feiyuanxing.com/kaiyuanxieyi/kaiyuanxieyi.html）</p>
+<p>#讲解：<br />#1.请使用root用户执行，软件默认安装在work用户，通常会在linux的/home 挂载一个大型磁盘<br />#2.软件安装在/home/work/local/hadoop/hadoop  有人问为什么这么深<br />#   2.1 work目录下local包含所有软件 hadoop安装大数据生态圈其他软件<br />#   2.2 hadoop的数据安装在 /home/work/data ，此目录由于数量较大，可以单独挂载一个磁盘</p>
+<p>INSTALL_HOME=/home/work/local/hadoop<br />ROOT_HOME=/home/work/local/hadoop/hadoop</p>
+<p>#hadoop 数据路径<br />hadoop_logs=/home/work/data/hadoop/logs<br />hadoop_tmp=/home/work/data/hadoop/tmp</p>
+<p>mkdir -p ${INSTALL_HOME}  &amp;&amp;  cd ${INSTALL_HOME}<br />mkdir -p ${hadoop_logs} &amp;&amp; mkdir -p ${hadoop_tmp} &amp;&amp; chown -R work:work /home/work/data/hadoop</p>
+<p>function add_work_user(){<br />	adduer work -d /home/work<br />	passwd work</p>
+<p>}</p>
+<p>function install_jdk(){<br /># 有jdk<br />echo $JAVA_HOME</p>
+<p>&nbsp;</p>
+<p>}</p>
+<p><br />#下载hadoop<br />function download_hodoop(){<br />	wget http://public.feiyuanxing.com/hadoop/hadoop-2.7.1_x64.tar.gz<br />}</p>
+<p>function configuration_ssh(){<br />	#设置本机免密码登录<br />	(echo -e "\n"<br />	sleep 1<br />	echo -e "\n"<br />	sleep 1<br />	echo -e "\n")|ssh-keygen -t rsa<br />	cat  ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys<br />	chmod 700  ~/.ssh<br />	chmod 600  ~/.ssh/authorized_keys</p>
+<p>}</p>
+<p>function configure_hadoop(){<br />	#最终生成的文件名为install_hadoop.bin而我们的all.tar.gz被&gt;&gt;到该文件后面<br />	#tail -c $size  install_hadoop.bin &gt;all.tar.gz<br />	rm -rf hadoop<br />	tar -zxf hadoop-2.7.1_x64.tar.gz<br />	pwd<br />	mv hadoop-2.7.1 hadoop &amp;&amp; cd hadoop</p>
+<p>	echo "正在安装.请稍等..."</p>
+<p>	#设置环境变量<br />	hadoop_home_test=`echo "${HADOOP_HOME}"`<br />	<br />	if [ -z  ${hadoop_home_test} ] ;then<br />		echo export HADOOP_HOME=${ROOT_HOME}/hadoop &gt;&gt; /etc/profile<br />		echo export PATH=$PATH:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin &gt;&gt; /etc/profile<br />		#使得环境变量生效<br />		source /etc/profile<br />		echo "hadoop 环境变量已存在..."<br />	fi<br />	<br />	#通过强大的sed命令来修改hadoop的配置文件<br />	jdk_home=`echo $JAVA_HOME`<br />	if [ -z ${jdk_home} ] ;then<br />		#安装JDK<br />		echo "安装JDK"<br />	fi<br />		<br />	sed -i "s!\${JAVA_HOME}!$(echo ${jdk_home})!g" ${ROOT_HOME}/etc/hadoop/hadoop-env.sh<br />	sed -i "/&lt;configuration&gt;/a\&lt;property\&gt;\n\&lt;name\&gt;fs.default.name\&lt;\/name\&gt;\n\&lt;value\&gt;hdfs://localhost:9000\&lt;\/value\&gt;\n\&lt;\/property\&gt;\n\&lt;property\&gt;\n\&lt;name\&gt;hadoop.tmp.dir\&lt;\/name\&gt;\n\&lt;value\&gt;$(echo ${hadoop_tmp})\&lt;\/value\&gt;\n\&lt;/property\&gt;"  ${ROOT_HOME}/etc/hadoop/core-site.xml<br />	cp ${ROOT_HOME}/etc/hadoop/mapred-site.xml.template  ${ROOT_HOME}/etc/hadoop/mapred-site.xml<br />	sed -i '/&lt;configuration&gt;/a\&lt;property\&gt;\n\&lt;name\&gt;mapred.job.tracker\&lt;/name\&gt;\n\&lt;value\&gt;localhost:9001\&lt;/value\&gt;\n\&lt;/property\&gt;'  ${ROOT_HOME}/etc/hadoop/mapred-site.xml<br />	sed -i '/&lt;configuration&gt;/a\\&lt;property\&gt;\n\&lt;name\&gt;dfs.replication\&lt;/name\&gt;\n\&lt;value\&gt;1\&lt;/value\&gt;\n\&lt;/property\&gt;'   ${ROOT_HOME}/etc/hadoop/hdfs-site.xml<br />	<br />	chown -R work:work ${INSTALL_HOME}<br />	echo "hadoop安装完成,开始格式化。。。"</p>
+<p>}</p>
+<p>function start_hadoop(){<br />	#格式化hadoop<br />	hadoop namenode -format<br />	echo "格式化完成..开始运行"<br />	#启动<br />	start-all.sh</p>
+<p>}<br />#add_work_user<br />download_hodoop;<br />#configuration_ssh<br />configure_hadoop;</p>
+<p>&nbsp;</p>
+<p>exit</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>QQ9715234</p>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2017-12-08 20:52</span> <a href='http://www.cnblogs.com/feiyuanxing/'>费元星的博客</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=8007091" rel="nofollow">编辑</a> <a href="8007091.html#" onclick="AddToWz(8007091);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=219212,cb_entryId=8007091,cb_blogApp=currentBlogApp,cb_blogUserGuid='806a1ad5-d1cf-e411-b908-9dcfd8948a71',cb_entryCreatedDate='2017/12/8 20:52:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='8007091.html#' onclick='return RefreshPage();'>刷新页面</a><a href='8007091.html#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<div id='cnblogs_c1' class='c_ad_block'></div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'></div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2017 费元星的博客
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<!--PageEndHtml Block Begin-->
+<td> <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+			<center><font size="15">未来星开发团队的官网</font></center>
+			</b>
+			</a>
+	</td>
+	<br>
+<!--PageEndHtml Block End-->
+</body>
+</html>

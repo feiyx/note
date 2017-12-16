@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="referrer" content="same-origin" />
+<title>Myeclipse报错-Java compiler level does not match 完美解决方法 - 费元星的博客 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=H3IOkgdPffpmgIkls4TofKh6PlSWVifjfgEhZr2VHqo1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee.css?v=NnZbvdgFaQNhu3t8P4Wsaz98sDQkgRt7Qxq2rzF0ZRU1"/>
+<link type="text/css" rel="stylesheet" href="/blog/customcss/219212.css?v=SlahhkE7ELQOV9kA%2fmhyfXP48o0%3d"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.css?v=EhLLUe5NHsx18JODVZscd5ef3A8WbJHKTlTvuKQjsl01"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/feiyuanxing/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/feiyuanxing/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/feiyuanxing/wlwmanifest.xml"/>
+<script src="//common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'feiyuanxing', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="/bundles/blog-common.js?v=Gjc-c4WOecxW2V4mwH9-EN2lPzwMWd4wyAzo535GvA01" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+<!--PageBeginHtml Block Begin-->
+<td> <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+			<center><font size="4">未来星开发团队的官网</font></center>
+			</b>
+			</a>
+	</td>
+	<br>
+<!--PageBeginHtml Block End-->
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/feiyuanxing/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/feiyuanxing/">费元星的博客</a></h1>
+<h2>未来星工作室--狒狒</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+	<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/feiyuanxing/">首页</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E8%B4%B9%E5%85%83%E6%98%9F%E7%9A%84%E5%8D%9A%E5%AE%A2">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/feiyuanxing/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/feiyuanxing/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a></li>
+</ul>
+
+
+			<div class="blogStats">
+				
+				<div id="blog_stats">
+<!--done-->
+随笔- 90&nbsp;
+文章- 0&nbsp;
+评论- 3&nbsp;
+</div>
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/feiyuanxing/p/5132778.html">Myeclipse报错-Java compiler level does not match 完美解决方法</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><div class="exp-content-block">
+<div class="exp-content-body exp-brief-step">
+<div class="exp-content-listblock">
+<div class="content-listblock-text">
+<p>从别的地方导入一个项目的时候,经常会遇到eclipse/Myeclipse报Description&nbsp; Resource Path Location Type Java compiler level does not match the version of the installed Java project facet.出现这个问题的原因是因为,eclipse/myeclipse的jdk编译版本与出现问题的项目JDK编译版本不一致所导致!</p>
+<p>MyEclipse</p>
+<p><span style="line-height: 1.5;">1。先设置好jdk,需要确定 项目,eclipse/myeclipse,系统 用的是同一个版本的JDK,我系统中安装的JDK是1.7,所以我把eclipse的jdk成1.7</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="exp-content-block">
+<div class="exp-content-body"><ol class="exp-conent-orderlist">
+<li class="exp-content-list list-item-1">
+<div class="content-list-media">
+<div class="content-list-image clearfix"><a class="exp-image-wraper" href="http://jingyan.baidu.com/album/95c9d20da3ec5fec4e756186.html?picindex=2" target="_self"><img class="exp-image-default" src="http://f.hiphotos.baidu.com/exp/w=500/sign=4cffeaa5818ba61edfeec82f713597cc/ac6eddc451da81cbc4116fa25166d016082431ee.jpg" alt="Java compiler level does not match解决方法" /></a></div>
+</div>
+</li>
+<li class="exp-content-list list-item-2">
+<div class="list-icon">&nbsp;</div>
+<div class="content-list-text">
+<p>进入 windows---proferences---java--compiler设置编译出来的文件使用的格式是 1.7版本的 (设置成多少都行,只要兼容,并且与你项目的编译版本一直就可以,我这里统一设置成1.7)</p>
+</div>
+<div class="content-list-media">
+<div class="content-list-image clearfix"><a class="exp-image-wraper" href="http://jingyan.baidu.com/album/95c9d20da3ec5fec4e756186.html?picindex=3" target="_self"><img class="exp-image-default" src="http://c.hiphotos.baidu.com/exp/w=500/sign=d93a255c9145d688a302b2a494c37dab/faedab64034f78f0edf1769c7a310a55b2191ce2.jpg" alt="Java compiler level does not match解决方法" /></a></div>
+</div>
+</li>
+<li class="exp-content-list list-item-3">
+<div class="list-icon">&nbsp;</div>
+<div class="content-list-text">
+<p>进入项目--properties---java Compiler 把项目编译版本也设置成 1.7</p>
+</div>
+<div class="content-list-media">
+<div class="content-list-image clearfix"><a class="exp-image-wraper" href="http://jingyan.baidu.com/album/95c9d20da3ec5fec4e756186.html?picindex=4" target="_self"><img class="exp-image-default" src="http://a.hiphotos.baidu.com/exp/w=500/sign=a6ba718cfe1f4134e037057e151e95c1/80cb39dbb6fd5266d0b2d07ba818972bd50736c7.jpg" alt="Java compiler level does not match解决方法" /></a></div>
+</div>
+</li>
+<li class="exp-content-list list-item-4">
+<div class="list-icon">&nbsp;</div>
+<div class="content-list-text">
+<p>进入项目--properties---Myeclipse---project Facets设置java文件的版本为 1.7</p>
+</div>
+<div class="content-list-media">
+<div class="content-list-image clearfix"><a class="exp-image-wraper" href="http://jingyan.baidu.com/album/95c9d20da3ec5fec4e756186.html?picindex=5" target="_self"><img class="exp-image-default" src="http://e.hiphotos.baidu.com/exp/w=500/sign=47eba1aff436afc30e0c3f658318eb85/a8014c086e061d954edfdb5778f40ad163d9cac0.jpg" alt="Java compiler level does not match解决方法" /></a></div>
+</div>
+</li>
+<li class="exp-content-list list-item-5">
+<div class="list-icon">5</div>
+<div class="content-list-text">
+<p>到此,完成配置,如果还有没解决的,可以加我QQ（&lt;b&gt;9715234&lt;/b&gt;）给我哟!</p>
+</div>
+</li>
+</ol></div>
+</div></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2016-01-15 11:23</span> <a href='http://www.cnblogs.com/feiyuanxing/'>费元星的博客</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=5132778" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(5132778);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=219212,cb_entryId=5132778,cb_blogApp=currentBlogApp,cb_blogUserGuid='806a1ad5-d1cf-e411-b908-9dcfd8948a71',cb_entryCreatedDate='2016/1/15 11:23:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<div id='cnblogs_c1' class='c_ad_block'></div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'></div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2017 费元星的博客
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<!--PageEndHtml Block Begin-->
+<td> <a style="color: red" align="center" href="https://www.feiyx.com/"><b>
+			<center><font size="15">未来星开发团队的官网</font></center>
+			</b>
+			</a>
+	</td>
+	<br>
+<!--PageEndHtml Block End-->
+</body>
+</html>
